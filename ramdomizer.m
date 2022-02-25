@@ -28,8 +28,6 @@ for i = 1:365
         end
     end   
 end
-x=DaysArr;
-y=TotArr;
 
 Totp1 = polyfit(DaysArr,TotArr,1);
 Totf1 = polyval(Totp1,DaysArr);
@@ -48,8 +46,6 @@ Totr2 = polyval(Totp2,DaysArr)-TotArr;
 Totr3 = polyval(Totp3,DaysArr)-TotArr;
 Totr4 = exp(polyval(Totp4,DaysArr))-TotArr;
 
-
-% Plotting graphs(Week days only)
 WeekDaysp1 = polyfit(WeekDaysArr,WeekTotArr,1);
 WeekDaysf1 = polyval(WeekDaysp1,WeekDaysArr);
 
@@ -67,7 +63,7 @@ WeekDaysr2 = polyval(WeekDaysp2,WeekDaysArr)-WeekTotArr;
 WeekDaysr3 = polyval(WeekDaysp3,WeekDaysArr)-WeekTotArr;
 WeekDaysr4 = exp(polyval(WeekDaysp4,WeekDaysArr))-WeekTotArr;
 
-figure(3)
+figure(1)
 Pred0 = zeros(1,261);
 Pred1 = zeros(1,261);
 Pred2 = zeros(1,261);
